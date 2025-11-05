@@ -10,7 +10,6 @@
 
 # Hugging Face Cache hierhin umleiten
 export HF_HOME=./models
-export DIFFUSERS_CACHE=$HF_HOME
 
 module purge
 module load palma/2022a
