@@ -39,7 +39,7 @@ sbatch prefetch.sh
 6) Generate images from `prompts.txt`.
 
 ```zsh
-sbatch run_flux.py
+sbatch flux_job.sh
 ```
 - Outputs go to `./outputs/<timestamp>/`.
 
