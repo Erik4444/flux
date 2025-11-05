@@ -36,7 +36,6 @@ build/
 
 ### Secrets ###
 .env
-.env.*
 .env.local
 
 ### Hugging Face / Model caches (kept under .cache by default) ###
