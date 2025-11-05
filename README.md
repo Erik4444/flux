@@ -18,7 +18,6 @@ source .venv/bin/activate
 3) Install dependencies.
 
 ```zsh
-pip install -U pip
 pip install -r requirements.txt
 ```
 
@@ -32,18 +31,15 @@ cp .env.example .env
 5) Prefetch the model weights into a local cache so the generation step can run offline.
 
 ```zsh
-bash prefetch.sh
+sbatch prefetch.sh
 ```
 - This script will source `.env` and use `HF_TOKEN`.
-- By default it writes to `./.cache/models` in this repo. Customize via env vars:
-  - `MODEL_NAME` (default `black-forest-labs/FLUX.1-dev`)
-  - `JOBDIR` (defaults to `./.cache`)
-  - `HF_HOME`, `DIFFUSERS_CACHE` if you want custom cache paths
+- By default it writes to `./models` in this repo.
 
 6) Generate images from `prompts.txt`.
 
 ```zsh
-python run_flux.py
+sbatch run_flux.py
 ```
 - Outputs go to `./outputs/<timestamp>/`.
 
