@@ -3,18 +3,13 @@ import torch
 from diffusers import FluxPipeline
 from utils import make_output_dir, load_prompts, save_metadata
 from tqdm import tqdm
-from dotenv import load_dotenv
-
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-# Load environment variables from .env at repo root (if present)
-load_dotenv(os.path.join(REPO_ROOT, ".env"))
 
-# Configurable via environment variables; sensible local defaults
-MODEL_NAME = os.getenv("MODEL_NAME", "black-forest-labs/FLUX.1-dev")
-PROMPT_FILE = os.getenv("PROMPT_FILE", os.path.join(REPO_ROOT, "prompts.txt"))
-OUTPUT_BASE = os.getenv("OUTPUT_BASE", os.path.join(REPO_ROOT, "outputs"))
+MODEL_NAME = "black-forest-labs/FLUX.1-dev"
+PROMPT_FILE = os.path.join(REPO_ROOT, "prompts.txt")
+OUTPUT_BASE = os.path.join(REPO_ROOT, "outputs")
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.float16 if torch.cuda.is_available() else torch.float32

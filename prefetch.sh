@@ -17,9 +17,8 @@ if [ -f ./.env ]; then
 fi
 
 # Where to store cached models; defaults to a local .cache directory if not provided
-export HF_HOME=${HF_HOME:="./models"}
-export DIFFUSERS_CACHE=${DIFFUSERS_CACHE:="$HF_HOME"}
-
+export HF_HOME="./models"
+export DIFFUSERS_CACHE=$HF_HOME
 
 # Required: HF_TOKEN must be set via environment or .env
 if [ -z "${HF_TOKEN:-}" ]; then
@@ -28,7 +27,7 @@ if [ -z "${HF_TOKEN:-}" ]; then
 fi
 
 # Allow overriding model name via env; default to FLUX.1-dev
-MODEL_NAME=${MODEL_NAME:-"black-forest-labs/FLUX.1-dev"}
+MODEL_NAME="black-forest-labs/FLUX.1-dev"
 
 # Minimal Python snippet to prefetch weights/tokenizer into cache
 python - <<'PY'
