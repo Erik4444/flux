@@ -51,19 +51,10 @@ sbatch flux_job.sh
 - `flux_job.sh` — Example SLURM job script to run generation on GPU nodes
 - `prompts.txt` — One prompt per line; lines starting with `#` are ignored
 
-## SLURM usage (HPC)
-
-- Prefetch on a CPU partition (adjust paths):
-  - Ensure `.env` exists with `HF_TOKEN`.
-  - Submit or run `prefetch.sh`. The `#SBATCH` lines are ignored when run as a normal shell script but recognized by `sbatch`.
-- Run generation on a GPU partition:
-  - Edit `flux_job.sh` to match your modules and paths.
-  - `sbatch flux_job.sh`
-
 
 ## Configuration
 The script uses `local_files_only=True`, so prefetch must succeed first.
-
+Other configuration for logging output and model are done in the `prefetch.sh`, `flux_job.sh` and `run_flux.py`.
 
 ## Security and git hygiene
 
