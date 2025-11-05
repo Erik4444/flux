@@ -54,7 +54,7 @@ sbatch flux_job.sh
 
 ## Configuration
 The script uses `local_files_only=True`, so prefetch must succeed first.
-Other configuration for logging output and model are done in the `prefetch.sh`, `flux_job.sh` and `run_flux.py`.
+Other configuration for logging, output and model are done in the `prefetch.sh`, `flux_job.sh` and `run_flux.py`.
 
 ## Security and git hygiene
 
