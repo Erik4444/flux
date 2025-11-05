@@ -18,7 +18,7 @@ module load GCCcore/11.3.0
 module load Python/3.10.4
 module load palma/2023a
 module load CUDA/12.1.1
-source ./fluxenv/bin/activate
+source ./venv/bin/activate
 
 python ./run_flux.py
 

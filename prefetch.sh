@@ -33,7 +33,7 @@ MODEL_NAME="black-forest-labs/FLUX.1-dev"
 python - <<'PY'
 import os
 from diffusers import FluxPipeline
-model = os.environ.get("MODEL_NAME", "black-forest-labs/FLUX.1-dev")
+model = "black-forest-labs/FLUX.1-dev"
 token = os.environ.get("HF_TOKEN")
 FluxPipeline.from_pretrained(model, token=token, low_cpu_mem_usage=True)
 print("Prefetch done into:", os.environ.get("HF_HOME"))
