@@ -1,0 +1,46 @@
+### OS/macOS ###
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+### Python ###
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.python-version
+.pytest_cache/
+.mypy_cache/
+
+### Virtual Environments ###
+.venv/
+venv/
+env/
+
+### Editors/IDE ###
+.vscode/
+.idea/
+
+### Notebooks ###
+.ipynb_checkpoints/
+
+### Logs, Outputs, Caches ###
+logs/
+outputs/
+.cache/
+coverage/
+dist/
+build/
+
+### Secrets ###
+.env
+.env.*
+.env.local
+
+### Hugging Face / Model caches (kept under .cache by default) ###
+# If you set custom cache dirs, ignore them explicitly here
+models/
+hf_cache/
+diffusers_cache/

@@ -1,0 +1,11 @@
+# Core
+torch
+accelerate
+transformers
+safetensors
+Pillow
+# Diffusion
+diffusers
+# Utils
+tqdm
+python-dotenv
